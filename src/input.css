@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img-style{
+    @apply w-full h-full object-cover duration-300 hover:scale-105 hover:rotate-3;
+}
+
+.profile-photo{
+    @apply aspect-square rounded-full overflow-hidden;
+}
+
+.nav_link{
+    @apply flex gap-5 h-[3.1rem] duration-300 w-full items-center pr-5 relative;
+}
+
+.post-card{
+    @apply py-3 px-3 bg-color-bg1 rounded-xl;
+}
+
+.message-div{
+    @apply flex items-center w-full gap-3 text-[14px] px-1 cursor-pointer;
+}
+
+.btn-color{
+    @apply text-white;
+}

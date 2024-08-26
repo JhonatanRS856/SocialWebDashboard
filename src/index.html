@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialMedia</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./input.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="content h-full flex flex-col bg-[var(--color-dark)]">
+        <header class="w-full bg-[var(--color-bg1)] fixed top-0 z-50">
+            <div class="w-full max-w-[1150px] mx-auto flex justify-between items-center px-4 py-2 lg:px-2">
+                <div>
+                    <h2 class="font-extrabold text-2xl lg:text-3xl">nokoSocial</h2>
+                </div>
+                <div class="search-div hidden lg:inline-block">
+                    <input type="text" placeholder="Search for creators, inspirations and projects">
+                    <i class='bx bx-search'></i>
+                </div>
+                <div class="flex gap-4">
+                    <button class="flex py-2 my-auto text-xl rounded-[2rem] px-4 box-s lg:px-6 bg-[var(--color-primary)] text-[var(--color-white)] font-bold">
+                        Create
+                    </button>
+                    <div class="profile-photo w-[46px] box-s">
+                        <img src="../img/profile-1.jpg" alt="Profile Photo" class="img-style">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="pb-6 pt-[78px] px-4 flex flex-1">
+            <div class="w-full max-w-[1150px] h-full mx-auto grid gap-4 grid-cols-1 md:grid-cols-[30%_1fr] lg:grid-cols-[270px_1fr_270px] lg:gap-6">
+                <aside class="aside-left max-w-[100%]  fixed md:pb-8 md:h-[calc(100vh-62px)] right-[0] translate-x-[100%] md:overflow-y-auto  md:translate-x-0 top-[50%] z-20 translate-y-[-50%] md:sticky md:top-[62px] md:right-auto md:translate-y-0 duration-300" id="asideNav">
+                    <div class="flex gap-4 flex-col relative">
+                        <div class="hidden gap-5 items-center md:flex bg-color-bg1 px-4 py-2 rounded-xl box-s">
+                            <div class="profile-photo w-12">
+                                <img src="../img/profile-1.jpg" alt="Profile Photo" class="img-style">
+                            </div>
+                            <div>
+                                <b>Diana Ayi</b>
+                                <span class="block">@dayi</span>
+                            </div>
+                        </div>
+                        <div class="py-2 bg-color-bg1 md:rounded-xl box-s">
+                            <nav>
+                                <ul class="flex flex-col">
+                                    <li>
+                                        <a href="#" class="nav_link active">
+                                            <span class="material-icons-sharp">
+                                                home
+                                            </span>
+                                            <span class="hidden md:inline-block">
+                                                Home
+                                            </span>    
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav_link">
+                                            <span class="material-icons-sharp">
+                                                explore
+                                            </span>
+                                            <span class="hidden md:inline-block">
+                                                Explore
+                                            </span>    
+                                        </a>
+                                    </li>   
+                                    <li>
+                                        <a href="#" class="nav_link">
+                                            <span class="material-icons-sharp">
+                                                notifications_none
+                                            </span>
+                                            <span class="hidden md:inline-block">
+                                                Notifications
+                                            </span>
+                                            
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav_link" id="messageLink">
+                                            <span class="material-icons-sharp">
+                                                mail_outline
+                                            </span>
+                                            <span class="hidden md:inline-block">
+                                                Messages
+                                            </span>  
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav_link">
+                                            <span class="material-icons-sharp">
+                                                bookmark_border
+                                            </span>
+                                            <span class="hidden md:inline-block">
+                                                Bookmarks
+                                            </span>
+                                            
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav_link">
+                                            <span class="material-icons-sharp">
+                                                trending_up
+                                            </span>
+                                            <span class="hidden md:inline-block">
+                                                Analytics
+                                            </span>  
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav_link" id="linkTheme">
+                                            <span class="material-icons-sharp">
+                                                palette
+                                            </span>
+                                            <span class="hidden md:inline-block">
+                                                Theme
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav_link">
+                                            <span class="material-icons-sharp">
+                                                settings
+                                            </span>
+                                            <span class="hidden md:inline-block">
+                                                Settings
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav> 
+                        </div>
+                        <button class="bg-[var(--color-primary)] rounded-[2rem] font-bold hidden p-[var(--btn-padding)] md:flex lg:w-full justify-center box-s btn-color">
+                            Create Post
+                        </button>
+                        <div class="absolute top-[50%] translate-y-[-50%] p-2 pr-2 rounded-tl-full z-[-1] rounded-bl-full md:hidden bg-[var(--color-primary)] left-[0] translate-x-[-100%] cursor-pointer text-white" id="btnShow-nav">
+                            <span class="material-icons-sharp flex">
+                                arrow_back_ios
+                            </span>
+                        </div>
+                    </div>
+                    
+                </aside>
+                <section class="section-main h-[calc(100vh-62px)] overflow-y-auto max-w-[100%] pb-8">
+                    <div class="reels-container flex gap-2 justify-between w-full overflow-x-auto text-white">
+                        <div class="reel-box">
+                            <img src="../img/story-1.jpg" alt="Your Story">
+                            <div class="info-reel">
+                                <div class="profile-photo w-8">
+                                    <img src="../img/profile-1.jpg" alt="" class="img-style">
+                                </div>
+                                <div>
+                                    <span>
+                                        Your Story
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reel-box">
+                            <img src="../img/story-2.jpg" alt="Your Story">
+                            <div class="info-reel">
+                                <div class="profile-photo w-8">
+                                    <img src="../img/profile-2.jpg" alt="" class="img-style">
+                                </div>
+                                <div>
+                                    <span>
+                                        Ultra James
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reel-box">
+                            <img src="../img/story-3.jpg" alt="Your Story">
+                            <div class="info-reel">
+                                <div class="profile-photo w-8">
+                                    <img src="../img/profile-3.jpg" alt="" class="img-style">
+                                </div>
+                                <div>
+                                    <span>
+                                        Winnie Hale
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reel-box">
+                            <img src="../img/story-4.jpg" alt="Your Story">
+                            <div class="info-reel">
+                                <div class="profile-photo w-8">
+                                    <img src="../img/profile-4.jpg" alt="" class="img-style">
+                                </div>
+                                <div>
+                                    <span>
+                                        Daniel Bale
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reel-box">
+                            <img src="../img/story-5.jpg" alt="Your Story">
+                            <div class="info-reel">
+                                <div class="profile-photo w-8">
+                                    <img src="../img/profile-5.jpg" alt="" class="img-style">
+                                </div>
+                                <div>
+                                    <span>
+                                        Jane Dae
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reel-box">
+                            <img src="../img/story-6.jpg" alt="Your Story">
+                            <div class="info-reel">
+                                <div class="profile-photo w-8">
+                                    <img src="../img/profile-6.jpg" alt="" class="img-style">
+                                </div>
+                                <div>
+                                    <span>
+                                        Tina White
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-3 bg-color-bg1 py-2 rounded-[1rem] w-full my-4 box-s">
+                        <div class="profile-photo w-11">
+                            <img src="../img/profile-1.jpg" alt="Profile Photo" class="img-style">
+                        </div>
+                        <div class="flex flex-grow px-4">
+                            <input type="text" placeholder="What's on your mind, Diana?" class="w-full bg-transparent">
+                        </div>
+                        <button class="font-bold bg-[var(--color-primary)] rounded-[2rem] p-[var(--btn-padding)] btn-color">
+                            Post
+                        </button>
+                    </div>
+                    <div class="flex flex-col w-full gap-4">
+                        <div class="post-card">
+                            <div class="flex w-full items-center justify-between">
+                                <div class="gap-5 items-center flex">
+                                    <div class="profile-photo w-10">
+                                        <img src="../img/profile-13.jpg" alt="Profile Photo" class="img-style">
+                                    </div>
+                                    <div>
+                                        <b>Diana Ayi</b>
+                                        <span class="block">Dubai, 15 minutes ago</span>
+                                    </div>
+                                </div>
+                                <div class="cursor-pointer">
+                                    <span class="material-icons-sharp">
+                                        more_vert
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="w-full mt-3">
+                                <img src="../img/feed-1.jpg" alt="">
+                            </div>
+                            <div class="mt-5 w-full flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <button class="flex heartBtn">
+                                        <span class="material-icons-sharp">
+                                            favorite_border
+                                        </span>
+                                    </button>
+                                    <button class="text-[25px] flex">
+                                        <i class='bx bx-message-rounded'></i>
+                                    </button>
+                                    <button class="flex">
+                                        <span class="material-icons-sharp">
+                                            share
+                                        </span>
+                                    </button>
+                                </div>
+                                <button class="flex">
+                                    <span class="material-icons-sharp">
+                                        bookmark_border
+                                    </span>
+                                </button>
+                            </div> 
+                            <div class="flex gap-3 items-center my-2 mt-3">
+                                <div class="flex pl-3">
+                                    <div class="profile-photo w-8 ml-[-12px]">
+                                        <img src="../img/profile-4.jpg" alt="" class="img-style">
+                                    </div>
+                                    <div class="profile-photo w-8 ml-[-12px]">
+                                        <img src="../img/profile-5.jpg" alt="" class="img-style">
+                                    </div>
+                                    <div class="profile-photo w-8 ml-[-12px]">
+                                        <img src="../img/profile-6.jpg" alt="" class="img-style">
+                                    </div>
+                                </div>
+                                <p class="text-[14px]">Liked by <b>Ernest Archiever</b> and <b>2,232 others</b></p>
+                            </div>
+                            <div>
+                                <p><b>Lana Rose </b>Zombie ipsum reversus ab viral inferno, nam rick grimes malum</p>
+                                <span class="block mt-2 text-[14px] text-color-gray cursor-pointer hover:underline duration-300 underline-offset-4">View all 277 comments</span>
+                            </div>      
+                        </div>
+                        <div class="post-card">
+                            <div class="flex w-full items-center justify-between">
+                                <div class="gap-5 items-center flex">
+                                    <div class="profile-photo w-10">
+                                        <img src="../img/profile-18.jpg" alt="Profile Photo" class="img-style">
+                                    </div>
+                                    <div>
+                                        <b>Benjamin Dwayne</b>
+                                        <span class="block">Miami, 2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="cursor-pointer">
+                                    <span class="material-icons-sharp">
+                                        more_vert
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="w-full mt-3">
+                                <img src="../img/feed-2.jpg" alt="">
+                            </div>
+                            <div class="mt-5 w-full flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <button class="flex heartBtn">
+                                        <span class="material-icons-sharp">
+                                            favorite_border
+                                        </span>
+                                    </button>
+                                    <button class="text-[25px] flex">
+                                        <i class='bx bx-message-rounded'></i>
+                                    </button>
+                                    <button class="flex">
+                                        <span class="material-icons-sharp">
+                                            share
+                                        </span>
+                                    </button>
+                                </div>
+                                <button class="flex">
+                                    <span class="material-icons-sharp">
+                                        bookmark_border
+                                    </span>
+                                </button>
+                            </div> 
+                            <div class="flex gap-3 items-center my-2 mt-3">
+                                <div class="flex pl-3">
+                                    <div class="profile-photo w-8 ml-[-12px]">
+                                        <img src="../img/profile-10.jpg" alt="" class="img-style">
+                                    </div>
+                                    <div class="profile-photo w-8 ml-[-12px]">
+                                        <img src="../img/profile-11.jpg" alt="" class="img-style">
+                                    </div>
+                                    <div class="profile-photo w-8 ml-[-12px]">
+                                        <img src="../img/profile-12.jpg" alt="" class="img-style">
+                                    </div>
+                                </div>
+                                <p class="text-[14px]">Liked by <b>Ernest Archiever</b> and <b>2,232 others</b></p>
+                            </div>
+                            <div>
+                                <p><b>Lana Rose </b>Zombie ipsum reversus ab viral inferno, nam rick grimes malum</p>
+                                <span class="block mt-2 text-[14px] text-color-gray cursor-pointer hover:underline duration-300 underline-offset-4">View all 277 comments</span>
+                            </div>      
+                        </div>
+                        <div class="post-card">
+                            <div class="flex w-full items-center justify-between">
+                                <div class="gap-5 items-center flex">
+                                    <div class="profile-photo w-10">
+                                        <img src="../img/profile-18.jpg" alt="Profile Photo" class="img-style">
+                                    </div>
+                                    <div>
+                                        <b>Malik Berry</b>
+                                        <span class="block">Ghana, 4 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="cursor-pointer">
+                                    <span class="material-icons-sharp">
+                                        more_vert
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="w-full mt-3">
+                                <img src="../img/feed-3.jpg" alt="">
+                            </div>
+                            <div class="mt-5 w-full flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <button class="flex heartBtn">
+                                        <span class="material-icons-sharp">
+                                            favorite_border
+                                        </span>
+                                    </button>
+                                    <button class="text-[25px] flex">
+                                        <i class='bx bx-message-rounded'></i>
+                                    </button>
+                                    <button class="flex">
+                                        <span class="material-icons-sharp">
+                                            share
+                                        </span>
+                                    </button>
+                                </div>
+                                <button class="flex">
+                                    <span class="material-icons-sharp">
+                                        bookmark_border
+                                    </span>
+                                </button>
+                            </div> 
+                            <div class="flex gap-3 items-center my-2 mt-3">
+                                <div class="flex pl-3">
+                                    <div class="profile-photo w-8 ml-[-12px]">
+                                        <img src="../img/profile-3.jpg" alt="" class="img-style">
+                                    </div>
+                                    <div class="profile-photo w-8 ml-[-12px]">
+                                        <img src="../img/profile-4.jpg" alt="" class="img-style">
+                                    </div>
+                                    <div class="profile-photo w-8 ml-[-12px]">
+                                        <img src="../img/profile-14.jpg" alt="" class="img-style">
+                                    </div>
+                                </div>
+                                <p class="text-[14px]">Liked by <b>Ernest Archiever</b> and <b>2,232 others</b></p>
+                            </div>
+                            <div>
+                                <p><b>Lana Rose </b>Zombie ipsum reversus ab viral inferno, nam rick grimes malum</p>
+                                <span class="block mt-2 text-[14px] text-color-gray cursor-pointer hover:underline duration-300 underline-offset-4">View all 277 comments</span>
+                            </div>      
+                        </div>
+                    </div>
+                </section>
+                <aside class="max-w-[100%] hidden lg:block aside-right overflow-x-visible lg:overflow-y-auto lg:h-[calc(100vh-62px)] pb-8">
+                    <div class="bg-color-bg1 rounded-xl py-3 px-3 overflow-hidden" id="messageContainer">
+                        <div class="flex w-full justify-between items-center">
+                            <div>
+                                <h2 class="font-bold text-xl">Messages</h2>
+                            </div>
+                            <i class='bx bx-edit text-[23px] cursor-pointer'></i>
+                        </div>
+                        <div class="h-[40px] relative w-full my-2">
+                            <input type="text" placeholder="Search messages" id="inputSearch" class="w-full h-full px-4 pl-10 rounded-[var(--border-radius)] bg-color-bg-dark">
+                            <i class='bx bx-search absolute top-[50%] translate-y-[-45%] left-3 text-[23px]'></i>
+                        </div>
+                        <div class="flex text-[14px] w-full justify-center">
+                            <div class="px-3 pb-2 border-b-4 border-color-primary cursor-pointer">
+                                <span>Primary</span>
+                            </div>
+                            <div class="px-3 pb-2 border-b-4 border-color-bg-dark cursor-pointer">
+                                <span>General</span>
+                            </div>
+                            <div class="px-3 pb-2 border-b-4 border-color-bg-dark cursor-pointer">
+                                <span class="text-color-primary">Request(7)</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col w-full gap-2 mt-3" id="divMensajes">
+                            
+                        </div>
+                    </div>
+                    <h3 class="my-4 text-xl">Request</h3>
+                    <div class="flex flex-col gap-3">
+                        <div class="bg-color-bg1 rounded-xl p-3 box-s">
+                            <div class="flex gap-3 text-[15px]">
+                                <div class="profile-photo w-10">
+                                    <img src="../img/profile-12.jpg" alt="" class="img-style">
+                                </div>
+                                <div>
+                                    <b>hajia Bintu</b><br>
+                                    <span class="text-message text-muted">8 mutual friends</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mt-3">
+                                <button class="px-6 py-[6px] font-bold bg-[var(--color-primary)] rounded-[2rem] btn-color">
+                                    Accept
+                                </button>
+                                <button class="px-6 py-[6px] font-bold text-black bg-color-white rounded-[2rem]">
+                                    Decline
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bg-color-bg1 rounded-xl p-3 box-s">
+                            <div class="flex gap-3 text-[15px]">
+                                <div class="profile-photo w-10">
+                                    <img src="../img/profile-18.jpg" alt="" class="img-style">
+                                </div>
+                                <div>
+                                    <b>Jackeline Mensah</b><br>
+                                    <span class="text-message text-muted">2 mutual friends</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mt-3">
+                                <button class="px-6 py-[6px] font-bold bg-[var(--color-primary)] rounded-[2rem] btn-color">
+                                    Accept
+                                </button>
+                                <button class="px-6 py-[6px] font-bold text-black bg-color-white rounded-[2rem]">
+                                    Decline
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bg-color-bg1 rounded-xl p-3 box-s">
+                            <div class="flex gap-3 text-[15px]">
+                                <div class="profile-photo w-10">
+                                    <img src="../img/profile-15.jpg" alt="" class="img-style">
+                                </div>
+                                <div>
+                                    <b>Jennifer Lawrence</b><br>
+                                    <span class="text-message text-muted">19 mutual friends</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mt-3">
+                                <button class="px-6 py-[6px] font-bold bg-[var(--color-primary)] rounded-[2rem] btn-color">
+                                    Accept
+                                </button>
+                                <button class="px-6 py-[6px] font-bold text-black bg-color-white rounded-[2rem]">
+                                    Decline
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>    
+            </div>
+            <div class="themecontainer" id="themecontainer">
+                <h2 class="text-2xl">Customize your view</h2>
+                <p class="text-color-gray mb-6">Manage your color and theme background</p>
+
+                <span>Color</span>
+                <div class="paleta-colors">
+                    <button class="btnColor"></button>
+                    <button class="btnColor"></button>
+                    <button class="btnColor active"></button>
+                    <button class="btnColor"></button>
+                    <button class="btnColor"></button>
+                </div>
+                <span>Background</span>
+                <div class="flex gap-4">
+                    <button class="themeBtn btnlight" id="btnlight">
+                        <span class="material-icons-sharp">
+                            light_mode
+                        </span>
+                        Light
+                    </button>
+                    <button class="themeBtn btnDark" id="btnDark">
+                        <span class="material-icons-sharp">
+                            dark_mode
+                        </span>
+                        Dark
+                    </button>
+                </div>
+
+                <button class="absolute top-[1.2rem] right-[1.6rem]" id="closeTheme">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
